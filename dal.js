@@ -5,7 +5,10 @@ const connectedKnex = knex({
     client: 'pg',
     version: '13',
     connection: {
-
+        host: 
+        user: 
+        password: 
+        database: 
     }
 })
 
