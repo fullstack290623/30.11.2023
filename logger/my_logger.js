@@ -5,7 +5,7 @@ const { combine, timestamp, label, prettyPrint } = format;
 const logger = createLogger({
   level: 'debug',
   format: combine(
-    label({ label: 'right meow!' }),
+    label({ label: 'REST API App' }),
     timestamp(),
     prettyPrint()
   ),
