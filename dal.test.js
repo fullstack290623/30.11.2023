@@ -9,7 +9,7 @@ describe('Testing functionallity of the DAL' , () => {
         await dal.new_employee({ 'NAME': 'Paul', 'AGE': 32, 'ADDRESS': 'California', 'SALARY': 20000.00})  // Id: 1
         await dal.new_employee({ 'NAME': 'Allen', 'AGE': 31, 'ADDRESS': 'New York', 'SALARY': 550000.00}) // Id: 2
         await dal.new_employee({ 'NAME': 'Teddy', 'AGE': 30, 'ADDRESS': 'Chicago', 'SALARY': 19000.00}) // Id: 3
-    })
+    }, 20000)
 
     it('get_all', async () => {
         const expected = 3
@@ -17,7 +17,7 @@ describe('Testing functionallity of the DAL' , () => {
         const actual = employees.length
         console.log(actual);
         assert.strictEqual(expected, actual)
-    })
+    }, 20000)
 
     it('get_by_id', async () => {
         const expected = 'Teddy'

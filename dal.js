@@ -22,10 +22,11 @@ const connectedKnex = knex({
     client: 'pg',
     version: '13',
     connection: {
-        host: config.db_local.host,
-        user: config.db_local.user,
-        password: config.db_local.password,
-        database: config.db_local.database
+        host: config.db_cloud.host,
+        user: config.db_cloud.user,
+        password: config.db_cloud.password,
+        database: config.db_cloud.database,
+        ssl: true
     }
 })
 
