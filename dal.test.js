@@ -4,6 +4,7 @@ const dal = require('./dal')
 
 describe('Testing functionallity of the DAL' , () => {
     beforeEach(async () => {
+        await dal.create_table_if_not_exist()
         await dal.delete_all()
         await dal.new_employee({ 'NAME': 'Paul', 'AGE': 32, 'ADDRESS': 'California', 'SALARY': 20000.00})  // Id: 1
         await dal.new_employee({ 'NAME': 'Allen', 'AGE': 31, 'ADDRESS': 'New York', 'SALARY': 550000.00}) // Id: 2
