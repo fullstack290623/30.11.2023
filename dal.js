@@ -1,14 +1,31 @@
 
 const knex = require('knex')
+const config = require('config')
+
+// const connectedKnex = knex({
+//     client: 'pg',
+//     version: '13',
+//     connection: {
+//         host: '127.0.0.1',
+//         user: 'postgres',
+//         password: 'admin',
+//         database: 'postgres'
+//     }
+// })
+
+// obj1.client = 'pg'
+// obj1.version = 13
+// obj1.connection = config.db
+// const connectedKnex_ = knex(obj1)
 
 const connectedKnex = knex({
     client: 'pg',
     version: '13',
     connection: {
-        host: 
-        user: 
-        password: 
-        database: 
+        host: config.db.host,
+        user: config.db.user,
+        password: config.db.password,
+        database: config.db.database
     }
 })
 
